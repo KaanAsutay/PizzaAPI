@@ -33,7 +33,14 @@ dbConnection()
 /* ------------------------------------------------------- */
 // Middlewares:
 
+// Accept JSON:
+app.use(express.json())
 
+// Run Logger:
+app.use(require('./src/middlewares/logger'))
+
+// res.getModelList():
+app.use(require('./src/middlewares/findSearchSortPage'))
 
 /* ------------------------------------------------------- */
 // Routes:
