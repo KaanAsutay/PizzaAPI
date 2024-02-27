@@ -55,6 +55,7 @@ app.all('/', (req, res) => {
 
 // users:
 app.use('/users', require('./src/routes/user'))
+app.use('/toppings', require('./src/routes/topping'))
 
 /* ------------------------------------------------------- */
 
