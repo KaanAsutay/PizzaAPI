@@ -1,4 +1,5 @@
 "use strict"
+const user = require('../models/user')
 /* -------------------------------------------------------
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
@@ -50,6 +51,13 @@ module.exports = {
             #swagger.tags = ["Users"]
             #swagger.summary = "Get Single User"
         */
+
+        const data = await User.findOne({ _id: req.params.id })
+
+        res.status(200).send({
+            error: false,
+            data
+        })
     },
 
     update: async (req, res) => {
