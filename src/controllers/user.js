@@ -36,6 +36,13 @@ module.exports = {
             #swagger.tags = ["Users"]
             #swagger.summary = "Create User"
         */
+
+        const data = await User.create(req.body)
+
+        res.status(201).send({
+            error: false,
+            data
+        })
     },
 
     read: async (req, res) => {
