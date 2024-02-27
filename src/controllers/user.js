@@ -4,6 +4,8 @@
 ------------------------------------------------------- */
 // User Controller:
 
+const User = require('../models/user')
+
 module.exports = {
 
     list: async (req, res) => {
@@ -19,6 +21,14 @@ module.exports = {
                 </ul>
             `
         */
+
+        const data = await res.getModelList(User)
+
+        res.status(200).send({
+            error: false,
+            details: res.getModelListDetails(User),
+            data
+        })
     },
 
     create: async (req, res) => {
