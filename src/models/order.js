@@ -39,9 +39,7 @@ const OrderSchema = new mongoose.Schema({
         reqired: true,
     },
 
-    totalPrice: {
-        type: Number
-    }
+    totalPrice: Number
 
 }, {collection: 'orders', timestamps: true})
 
