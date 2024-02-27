@@ -65,6 +65,14 @@ module.exports = {
             #swagger.tags = ["Users"]
             #swagger.summary = "Update User"
         */
+
+        const data = await User.updateOne({ _id: req.params.id }, req.body)
+
+        res.status(200).send({
+            error: false,
+            data,
+            new: await  User.findOne({ _id: req.params.id })
+        })
     },
 
     delete: async (req, res) => {
