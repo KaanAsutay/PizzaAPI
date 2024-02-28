@@ -46,10 +46,10 @@ module.exports = {
                     // })
 
                     const data = {
-                        access: jwt.sign(user.toJSON(), process.env.ACCESS_KEY, { expiresIn: '10m' }),
-                        refresh: jwt.sign({ _id: user._id, password: user.password }, process.env.REFRESH_KEY, { expiresIn: '3d' }),
+                        access: (user.toJSON(), process.env.ACCESS_KEY, { expiresIn: '10m' }),
+                        refresh: { _id: user._id, password: user.password },
                         shortExpiresIn: '10m',
-                        longExpiresIn: '30d'
+                        longExpiresIn: '3d'
                     }
 
                     res.send({
