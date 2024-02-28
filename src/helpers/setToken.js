@@ -10,7 +10,7 @@ const jwt = require('jsonwebtoken')
 module.exports = function (userData, isRefresh = false) {
 
     const data = {
-        access: userData,
+        access: userData.toJSON(),
         refresh: { _id: userData._id, password: userData.password },
         shortExpiresIn: '10m',
         longExpiresIn: '3d',
