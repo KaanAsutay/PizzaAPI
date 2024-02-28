@@ -17,9 +17,7 @@ module.exports = function (userData, isRefresh = false) {
     }
 
     return {
-        token: {
-            access: jwt.sign(data.access, process.env.ACCESS_KEY, { expiresIn: data.shortExpiresIn }),
-            refresh: (isRefresh ? null : jwt.sign(data.refresh, process.env.REFRESH_KEY, { expiresIn: data.longExpiresIn }))
-        }
+        access: jwt.sign(data.access, process.env.ACCESS_KEY, { expiresIn: data.shortExpiresIn }),
+        refresh: (isRefresh ? undefined : jwt.sign(data.refresh, process.env.REFRESH_KEY, { expiresIn: data.longExpiresIn }))
     }
 }

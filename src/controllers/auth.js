@@ -5,6 +5,7 @@
 // Auth Controller:
 
 const jwt = require('jsonwebtoken')
+const setToken = require('../helpers/setToken')
 
 const User = require('../models/user')
 
@@ -45,19 +46,24 @@ module.exports = {
                     //     }
                     // })
 
-                    const data = {
-                        access: (user.toJSON(), process.env.ACCESS_KEY, { expiresIn: '10m' }),
-                        refresh: { _id: user._id, password: user.password },
-                        shortExpiresIn: '10m',
-                        longExpiresIn: '3d'
-                    }
+                    // const data = {
+                    //     access: (user.toJSON(), process.env.ACCESS_KEY, { expiresIn: '10m' }),
+                    //     refresh: { _id: user._id, password: user.password },
+                    //     shortExpiresIn: '10m',
+                    //     longExpiresIn: '3d'
+                    // }
+
+                    // res.send({
+                    //     error: false,
+                    //     token: {
+                    //         access: jwt.sign(data.access, process.env.ACCESS_KEY, { expiresIn: data.shortExpiresIn }),
+                    //         refresh: jwt.sign(data.refresh, process.env.REFRESH_KEY, { expiresIn: data.longExpiresIn })
+                    //     }
+                    // })
 
                     res.send({
                         error: false,
-                        token: {
-                            access: jwt.sign(data.access, process.env.ACCESS_KEY, { expiresIn: data.shortExpiresIn }),
-                            refresh: jwt.sign(data.refresh, process.env.REFRESH_KEY, { expiresIn: data.longExpiresIn })
-                        }
+                        token: setToken(user)
                     })
 
                 } else {
@@ -114,19 +120,24 @@ module.exports = {
 
                             if (user.isActive) {
 
-                                const data = {
-                                    access: (user.toJSON(), process.env.ACCESS_KEY, { expiresIn: '10m' }),
-                                    refresh: { _id: user._id, password: user.password },
-                                    shortExpiresIn: '10m',
-                                    longExpiresIn: '3d'
-                                }
+                                // const data = {
+                                //     access: (user.toJSON(), process.env.ACCESS_KEY, { expiresIn: '10m' }),
+                                //     refresh: { _id: user._id, password: user.password },
+                                //     shortExpiresIn: '10m',
+                                //     longExpiresIn: '3d'
+                                // }
             
+                                // res.send({
+                                //     error: false,
+                                //     token: {
+                                //         access: jwt.sign(data.access, process.env.ACCESS_KEY, { expiresIn: data.shortExpiresIn }),
+                                //         refresh: null
+                                //     }
+                                // })
+
                                 res.send({
                                     error: false,
-                                    token: {
-                                        access: jwt.sign(data.access, process.env.ACCESS_KEY, { expiresIn: data.shortExpiresIn }),
-                                        refresh: null
-                                    }
+                                    token: setToken(user, true)
                                 })
 
                             } else {
