@@ -3,6 +3,14 @@
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
 const { mongoose } = require('../configs/dbConnection')
+/* ------------------------------------------------------- *
+{
+    "userId": "652d71b9c31f8eecbf12519b",
+    "pizzaId": "652d71bfc31f8eecbf12519f",
+    "size": "Small",
+    "quantity": 2,
+    "price": 99.99
+}
 /* ------------------------------------------------------- */
 // Order Model:
 
@@ -31,12 +39,14 @@ const OrderSchema = new mongoose.Schema({
 
     quantity: {
         type: Number,
-        reqired: true,
+        default: 1
+        // reqired: true,
     },
 
     price: {
         type: Number,
-        reqired: true,
+        default: 0
+        // reqired: true,
     },
 
     totalPrice: Number

@@ -23,7 +23,7 @@ module.exports = {
             `
         */
 
-        const data = await res.getModelList(Pizza)
+        const data = await res.getModelList(Pizza, {}, 'toppings')
 
         res.status(200).send({
             error: false,
@@ -52,7 +52,7 @@ module.exports = {
             #swagger.summary = "Get Single Pizza"
         */
 
-        const data = await Pizza.findOne({ _id: req.params.id })
+        const data = await Pizza.findOne({ _id: req.params.id }).populate('toppings')
 
         res.status(200).send({
             error: false,

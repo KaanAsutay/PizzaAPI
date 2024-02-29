@@ -1,0 +1,8 @@
+::ffff:127.0.0.1 - - [28/Feb/2024:19:54:35 +0000] "POST /auth/login HTTP/1.1" 401 72 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [28/Feb/2024:19:54:54 +0000] "POST /auth/login HTTP/1.1" 401 99 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [28/Feb/2024:19:55:12 +0000] "POST /auth/login HTTP/1.1" 401 99 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [28/Feb/2024:19:55:23 +0000] "POST /users HTTP/1.1" 201 271 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [28/Feb/2024:19:55:32 +0000] "POST /auth/login HTTP/1.1" 401 99 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [28/Feb/2024:19:55:52 +0000] "POST /users HTTP/1.1" 500 175 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [28/Feb/2024:19:55:58 +0000] "GET /users HTTP/1.1" 200 1189 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [28/Feb/2024:19:56:18 +0000] "POST /auth/login HTTP/1.1" 401 100 "-" "Thunder Client (https://www.thunderclient.com)"

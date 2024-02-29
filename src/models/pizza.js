@@ -3,6 +3,16 @@
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
 const { mongoose } = require('../configs/dbConnection')
+/* ------------------------------------------------------- *
+{
+  "name": "Pizza Margarita",
+  "price": 124.99,
+  "toppings": [
+    "652d71b9c31f8eecbf12519b",
+    "652d71bcc31f8eecbf12519d",
+    "652d71bfc31f8eecbf12519f"
+  ]
+}
 /* ------------------------------------------------------- */
 // Pizza Model:
 

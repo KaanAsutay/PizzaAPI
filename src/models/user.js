@@ -3,6 +3,13 @@
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
 const { mongoose } = require('../configs/dbConnection')
+/* ------------------------------------------------------- *
+{
+    "username": "test",
+    "password": "1234",
+    "email": "abc@site.com",
+    "isAdmin": "true"
+  }
 /* ------------------------------------------------------- */
 // User Model:
 
