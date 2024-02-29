@@ -38,6 +38,14 @@ module.exports = {
             #swagger.summary = "Create Order"
         */
 
+        // Calculatings:
+        if (!req.body?.price) {
+            const Pizza = require('../models/pizza')
+            const dataPizza = await Pizza.findOne({ _id: req.body.pizzaId })
+            req.body.price = dataPrice.price
+        }
+        req.body.totalPrice = req.body.price * req.body.quantity
+
         const data = await Order.create(req.body)
 
         res.status(201).send({

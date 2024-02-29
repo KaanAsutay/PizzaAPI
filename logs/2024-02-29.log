@@ -11,3 +11,7 @@
 ::ffff:127.0.0.1 - - [29/Feb/2024:20:19:37 +0000] "POST /toppings HTTP/1.1" 201 158 "-" "Thunder Client (https://www.thunderclient.com)"
 ::ffff:127.0.0.1 - - [29/Feb/2024:20:19:45 +0000] "POST /toppings HTTP/1.1" 201 159 "-" "Thunder Client (https://www.thunderclient.com)"
 ::ffff:127.0.0.1 - - [29/Feb/2024:20:19:55 +0000] "POST /toppings HTTP/1.1" 201 160 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [29/Feb/2024:20:22:55 +0000] "GET /toppings HTTP/1.1" 200 650 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [29/Feb/2024:20:23:41 +0000] "POST /pizzas HTTP/1.1" 201 277 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [29/Feb/2024:20:23:51 +0000] "POST /pizzas HTTP/1.1" 500 250 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [29/Feb/2024:20:24:01 +0000] "POST /pizzas HTTP/1.1" 201 250 "-" "Thunder Client (https://www.thunderclient.com)"
