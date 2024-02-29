@@ -76,6 +76,12 @@ module.exports = {
         */
 
         // Calculatings:
+        req.body.quantity = req.body?.quantity || 1 // default: 1
+        if (!req.body?.price) {
+            const Pizza = require('../models/pizza')
+            const dataPizza = await Pizza.findOne({ _id: req.body.pizzaId })
+            req.body.price = dataPrice.price
+        }
         req.body.totalPrice = req.body.price * req.body.quantity
 
         const data = await Order.updateOne({ _id: req.params.id }, req.body)
