@@ -75,6 +75,9 @@ module.exports = {
             #swagger.summary = "Update Order"
         */
 
+        // Calculatings:
+        req.body.totalPrice = req.body.price * req.body.quantity
+
         const data = await Order.updateOne({ _id: req.params.id }, req.body)
 
         res.status(200).send({
