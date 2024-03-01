@@ -71,6 +71,8 @@ app.all('/', (req, res) => {
     res.send({
         error: false,
         message: 'Welcome to PIZZA API',
+        isLogin: req.isLogin,
+        user: req.user
     })
 })
 
