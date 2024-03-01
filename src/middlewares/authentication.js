@@ -16,7 +16,7 @@ module.exports = (req, res, next) => {
     req.user = null
 
     jwt.verify(accessToken, process.env.ACCESS_KEY, function (err, userData) {
-        if (userData) {
+        if (userData && userData.isActive) {
             req.isLogin = true
             req.user = userData
         }
