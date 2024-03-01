@@ -37,24 +37,25 @@ dbConnection()
 app.use(express.json())
 
 // accessToken Control:
-const jwt = require('jsonwebtoken')
+app.use(require('./src/middlewares/authentication'))
+// const jwt = require('jsonwebtoken')
 
-app.use ( (req, res, next) => {
+// app.use ( (req, res, next) => {
 
-    const auth = req.headers?.authorization               // Bearer ...token...
-    const accessToken = auth ? auth.split(' ')[1] : null  // ['Bearer', '...token...']
+//     const auth = req.headers?.authorization               // Bearer ...token...
+//     const accessToken = auth ? auth.split(' ')[1] : null  // ['Bearer', '...token...']
 
-    req.isLogin = false
-    req.user = null
+//     req.isLogin = false
+//     req.user = null
 
-    jwt.verify(accessToken, process.env.ACCESS_KEY, function (err, userData) {
-        if (userData) {
-            req.isLogin = true
-            req.user = userData
-        }
-    })
-    next()
-})
+//     jwt.verify(accessToken, process.env.ACCESS_KEY, function (err, userData) {
+//         if (userData) {
+//             req.isLogin = true
+//             req.user = userData
+//         }
+//     })
+//     next()
+// })
 
 // Run Logger:
 app.use(require('./src/middlewares/logger'))
