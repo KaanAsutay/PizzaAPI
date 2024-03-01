@@ -1,0 +1,7 @@
+::ffff:127.0.0.1 - - [01/Mar/2024:17:52:51 +0000] "GET /pizzas HTTP/1.1" 200 1117 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [01/Mar/2024:17:53:13 +0000] "GET /toppings HTTP/1.1" 200 650 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [01/Mar/2024:17:53:21 +0000] "GET /toppings/65e0e6d12135d92eb268e9a2 HTTP/1.1" 200 143 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [01/Mar/2024:17:53:25 +0000] "DELETE /toppings/65e0e6d12135d92eb268e9a2 HTTP/1.1" 204 - "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [01/Mar/2024:17:53:27 +0000] "GET /toppings/65e0e6d12135d92eb268e9a2 HTTP/1.1" 200 27 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [01/Mar/2024:17:53:32 +0000] "GET /toppings HTTP/1.1" 200 529 "-" "Thunder Client (https://www.thunderclient.com)"
+::ffff:127.0.0.1 - - [01/Mar/2024:17:53:44 +0000] "GET /orders HTTP/1.1" 200 1064 "-" "Thunder Client (https://www.thunderclient.com)"
