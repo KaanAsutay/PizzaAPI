@@ -21,5 +21,8 @@ router.route('/:id')
     .patch(permissions.isAdmin, pizza.update)
     .delete(permissions.isAdmin, pizza.delete)
 
+router.put('/:id/pushToppings', permissions.isAdmin, pizza.pushToppings)
+router.put('/:id/pullToppings', permissions.isAdmin, pizza.pullToppings)
+
 /* ------------------------------------------------------- */
 module.exports = router
